@@ -1,5 +1,8 @@
 const userSchema = require('../models/userSchema')
-const mongoose = require("mongoose")
+const bcrypt = require("bcrypt")
+const jwt = require("jsonwebtoken")
+
+const SECRET = process.env.SECRET
 
 const getAll = async (req, res) => {
     try {
